@@ -1,0 +1,22 @@
+.logo {
+  border-radius: 50px;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.w3-section {
+  border-radius: 15px;
+
+  p {
+    display: flex;
+  }
+
+  .fa {
+    font-size: 20px !important;
+    margin-right: 7.5px;
+  }
+}

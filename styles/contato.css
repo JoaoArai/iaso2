@@ -1,0 +1,23 @@
+#main {
+  margin-left: 120px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rodape {
+  display: flex;
+  gap: 15px;
+}
+
+.w3-section {
+  p {
+    display: flex;
+  }
+
+  .fa {
+    font-size: 20px !important;
+    margin-right: 7.5px;
+  }
+}

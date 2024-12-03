@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>IA'so - Seu Agente de Saúde Inteligente</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+  <body class="w3-black">
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <img src="../img/logo.png" class="logo-topo" />
+      <a
+        href="./home.html"
+        class="w3-bar-item w3-button w3-padding-large w3-black"
+      >
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>Inicio</p>
+      </a>
+      <a
+        href="./sobre.html"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+      >
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>Sobre</p>
+      </a>
+
+      <a
+        href="./contato.html"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+      >
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>Contato</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div
+        class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"
+      >
+        <a
+          href="./home.html"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important"
+          >Home
+        </a>
+        <a
+          href="#about"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important"
+          >Sobre
+        </a>
+        <a
+          href="./contato.html"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important"
+          >Contato
+        </a>
+      </div>
+    </div>
+
+    <div class="w3-padding-large" id="main">
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="top">
+        <h1 id="main-title"></h1>
+        <p>Seu assistente virtual para dúvidas sobre saúde.</p>
+        <div class="container">
+          <div class="chat-container">
+            <div id="chat-messages"></div>
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Digite sua pergunta sobre saúde..."
+            />
+            <button id="send-button">Enviar</button>
+          </div>
+          <button id="headache-info-button" class="info-button">
+            Informações sobre Dor de Cabeça
+          </button>
+          <button id="fever-info-button" class="info-button">
+            Informações sobre Febre
+          </button>
+          <button id="muscle-pain-info-button" class="info-button">
+            Informações sobre Dores Musculares
+          </button>
+          <button id="nausea-info-button" class="info-button">
+            Informações sobre Enjoo
+          </button>
+          <button id="pregnancy-info-button" class="info-button">
+            Informações sobre Gravidez
+          </button>
+          <button id="fatigue-info-button" class="info-button">
+            Informações sobre Fadiga
+          </button>
+          <button id="cancer-info-button" class="info-button">
+            Informações sobre Câncer
+          </button>
+          <button id="cpr-info-button" class="info-button">
+            Informações sobre RCP
+          </button>
+          <button id="diabetes-info-button" class="info-button">
+            Informações sobre Diabetes
+          </button>
+          <button id="blood-pressure-info-button" class="info-button">
+            Informações sobre Pressão Alta
+          </button>
+          <button id="low-blood-pressure-info-button" class="info-button">
+            Informações sobre Pressão Baixa
+          </button>
+          <button id="flu-info-button" class="info-button">
+            Informações sobre Gripe
+          </button>
+          <button id="head-injury-info-button" class="info-button">
+            Informações sobre Pancadas na Cabeça
+          </button>
+        </div>
+      </header>
+      <div class="w3-content w3-justify w3-text-grey" id="about"></div>
+      <footer class="w3-center w3-light-grey rodape">
+        <!-- <a
+          href="#top"
+          class="w3-button w3-black w3-padding-large w3-margin-bottom w3-hover-light-grey w3-hide-small"
+          id="back-to-top"
+        >
+          Back to Top
+        </a> -->
+        <p>&copy; 2024 IA'so</p>
+      </footer>
+    </div>
+    <div id="headache-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Dor de Cabeça</h2>
+        <p>
+          A dor de cabeça, também conhecida como cefaleia, é um sintoma muito
+          comum que pode ter diversas causas:
+        </p>
+        <ul>
+          <li>Estresse</li>
+          <li>Desidratação</li>
+          <li>Falta de sono</li>
+          <li>Uso excessivo de telas</li>
+          <li>Má alimentação</li>
+          <li>Sinusite ou gripe</li>
+          <li>Enxaqueca</li>
+          <li>Pressão alta</li>
+        </ul>
+        <p>
+          A dor de cabeça pode ser sentida em estruturas sensíveis à dor da
+          cabeça e do pescoço, como músculos, vasos sanguíneos, mucosa dos seios
+          da face e estruturas dentais.
+        </p>
+        <p>Para aliviar a dor de cabeça, pode-se:</p>
+        <ul>
+          <li>
+            Ficar em repouso em um ambiente escuro, silencioso e bem ventilado
+          </li>
+          <li>
+            Repor líquidos, se houver sinais de desidratação, mas beber goles
+            pequenos para não sentir enjoo
+          </li>
+          <li>
+            Usar plantas com propriedades anti-inflamatórias e analgésicas, como
+            alecrim, gengibre e salgueiro
+          </li>
+        </ul>
+        <p>
+          Para identificar corretamente o tipo de dor de cabeça, é recomendado
+          consultar um neurologista.
+        </p>
+      </div>
+    </div>
+    <div id="fever-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Febre</h2>
+        <p>
+          Quando alguém está com febre, é importante tomar alguns cuidados,
+          como:
+        </p>
+        <ul>
+          <li>Repousar e evitar atividades intensas</li>
+          <li>
+            Tomar um banho morno ou aplicar toalhas úmidas na testa e pulsos
+          </li>
+          <li>Vestir roupas leves e folgadas</li>
+          <li>Manter o ambiente fresco</li>
+          <li>Diminuir a quantidade de roupa de cama</li>
+          <li>Beber bastante água e líquidos em geral</li>
+          <li>Manter uma alimentação adequada, mas leve</li>
+        </ul>
+        <p>
+          Além disso, é possível tomar medicamentos antipiréticos, como
+          ibuprofeno e paracetamol, para ajudar a controlar a temperatura.
+        </p>
+        <p>É importante evitar:</p>
+        <ul>
+          <li>
+            Usar álcool ou outros produtos químicos, pois podem causar
+            intoxicação
+          </li>
+          <li>Usar cobertores e roupas em excesso</li>
+          <li>Beber líquidos muito quentes</li>
+        </ul>
+        <p>
+          A febre é considerada perigosa quando atinge ou se aproxima dos 40°C.
+          Nesses casos, é fundamental procurar consulta médica ou ir ao
+          pronto-socorro.
+        </p>
+      </div>
+    </div>
+    <div id="muscle-pain-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Dores Musculares</h2>
+        <p>
+          As dores musculares, também conhecidas como mialgia, podem ter
+          diversas causas, como:
+        </p>
+        <ul>
+          <li>Atividades físicas intensas ou movimentos incorretos</li>
+          <li>Torções e distensões</li>
+          <li>Pancadas ou quedas</li>
+          <li>Estresse, tensão ou ansiedade</li>
+          <li>Câimbras</li>
+          <li>Má postura</li>
+          <li>Doenças como fibromialgia e inflamação do nervo ciático</li>
+          <li>
+            Infecções respiratórias e virais, como resfriados, gripe ou dengue
+          </li>
+        </ul>
+        <p>
+          A dor muscular pode ser profunda, maçante e constante ou rápida,
+          aleatória, crônica e aguda. Dependendo da causa, a dor pode
+          desaparecer em horas ou dias, ou durar por longos meses.
+        </p>
+        <p>Para aliviar a dor muscular, pode-se:</p>
+        <ul>
+          <li>Alongar-se antes de qualquer atividade física</li>
+          <li>Aplicar compressas de gelo na área afetada</li>
+        </ul>
+        <p>
+          Em casos de dores musculares sem motivo aparente, é recomendado
+          consultar um médico, especialmente reumatologistas, neurologistas,
+          fisiatras, ortopedistas, psiquiatras, psicólogos, fisioterapeutas,
+          acupunturistas e enfermeiros.
+        </p>
+      </div>
+    </div>
+    <div id="nausea-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Enjoo (Náusea)</h2>
+        <p>
+          A náusea, também conhecida como enjoo, é uma sensação de desconforto e
+          mal-estar na região superior do abdômen, que pode ser acompanhada de
+          vontade de vomitar.
+        </p>
+        <p>A náusea pode ser causada por:</p>
+        <ul>
+          <li>Movimentos contínuos, como os de um carro ou avião</li>
+          <li>Doenças e condições médicas</li>
+        </ul>
+        <p>Alguns sintomas que podem acompanhar a náusea são:</p>
+        <ul>
+          <li>Salivação excessiva</li>
+          <li>Suor</li>
+          <li>Calafrios</li>
+          <li>Respiração acelerada</li>
+          <li>Tontura</li>
+        </ul>
+        <p>Para aliviar a náusea, pode-se:</p>
+        <ul>
+          <li>Beber pequenas quantidades de água</li>
+          <li>Consumir gengibre</li>
+          <li>Comer alimentos leves</li>
+          <li>Manter-se em ambientes ventilados</li>
+          <li>Praticar a respiração profunda</li>
+        </ul>
+        <p>
+          Após vomitar, é recomendado descansar o estômago por uma hora e beber
+          líquidos claros em pequenas doses. Depois de uma hora, pode-se comer
+          alimentos leves, como bolachas de água e sal, arroz, batata ou
+          gelatina.
+        </p>
+        <p>
+          Para tratar a náusea, os médicos podem receitar medicamentos
+          antieméticos, dependendo da causa e da gravidade dos sintomas.
+        </p>
+      </div>
+    </div>
+    <div id="pregnancy-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Gravidez</h2>
+        <p>
+          A gravidez é o período em que um bebê se desenvolve no interior do
+          útero da mulher, após a fecundação de um óvulo por um espermatozoide.
+          A gestação dura cerca de 40 semanas (280 dias) e é marcada por
+          diversas mudanças no corpo da mãe.
+        </p>
+        <p>Alguns dos principais sintomas de gravidez são:</p>
+        <ul>
+          <li>Atraso menstrual</li>
+          <li>Enjoos matinais</li>
+          <li>Alterações de humor</li>
+          <li>Cansaço excessivo</li>
+          <li>Sensibilidade nas mamas</li>
+          <li>Aumento da vontade de urinar</li>
+        </ul>
+        <p>
+          No entanto, os sintomas de gravidez podem variar bastante de
+          intensidade e não são iguais em todas as mulheres.
+        </p>
+        <p>
+          Para saber se está grávida, é possível fazer um teste de gravidez de
+          farmácia ou dosar o beta HCG (hormônio produzido pela gestação) no
+          sangue ou na urina.
+        </p>
+        <p>Durante os três primeiros meses de gravidez, é importante evitar:</p>
+        <ul>
+          <li>Automedicação</li>
+          <li>Consumo de bebidas alcoólicas ou cigarro</li>
+          <li>Comidas cruas, como peixes e carnes</li>
+          <li>Exercícios físicos intensos sem recomendação médica</li>
+          <li>Consumo excessivo de chás e produtos com cafeína</li>
+        </ul>
+      </div>
+    </div>
+    <div id="fatigue-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Fadiga</h2>
+        <p>
+          A fadiga é uma sensação de falta de energia e de motivação, tanto
+          física como mental, que pode levar a uma dificuldade em iniciar e
+          manter atividades. A fadiga pode ser acompanhada de um desejo de
+          descansar e de outros sintomas, como dores de cabeça.
+        </p>
+        <p>
+          A fadiga é normal após esforço físico, estresse prolongado e privação
+          de sono. No entanto, a fadiga que aumenta e se apresenta depois de
+          atividades que anteriormente não a provocavam pode ser um sinal de um
+          distúrbio, como depressão, anemia ou alguns tipos de câncer.
+        </p>
+        <p>Algumas dicas para reduzir o cansaço são:</p>
+        <ul>
+          <li>Praticar exercícios</li>
+          <li>Organizar melhor a rotina</li>
+          <li>Beber água</li>
+          <li>Cuidar com a ansiedade</li>
+          <li>Mudar os hábitos alimentares</li>
+          <li>Reduzir o uso da tecnologia</li>
+          <li>Ter bom humor</li>
+        </ul>
+      </div>
+    </div>
+    <div id="cancer-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Câncer</h2>
+        <p>
+          O câncer, também conhecido como neoplasia maligna ou tumor maligno, é
+          um conjunto de mais de 100 doenças que se caracterizam pelo
+          crescimento desordenado de células.
+        </p>
+        <p>
+          O câncer pode se desenvolver em qualquer órgão ou tecido do corpo, mas
+          os mais afetados são a pele, a mama, a próstata e o intestino.
+        </p>
+        <h3>Principais causas do câncer:</h3>
+        <ul>
+          <li>
+            Mutações, que são alterações na estrutura genética das células
+          </li>
+          <li>
+            Agentes cancerígenos físicos, como a radiação ultravioleta e
+            ionizante
+          </li>
+          <li>
+            Substâncias químicas cancerígenas, como o amianto, o arsênio e
+            componentes do fumo do tabaco
+          </li>
+          <li>
+            Agentes cancerígenos biológicos, como infecções por certos vírus,
+            bactérias ou parasitos
+          </li>
+        </ul>
+        <h3>Sintomas comuns do câncer:</h3>
+        <ul>
+          <li>Nódulos ou inchaço</li>
+          <li>Anemia ou infecções frequentes</li>
+          <li>Sangue nas fezes ou secreções</li>
+          <li>Pintas com bordas irregulares ou feridas que não cicatrizam</li>
+          <li>Perda de peso</li>
+          <li>Dor</li>
+          <li>Fadiga</li>
+          <li>Convulsões</li>
+        </ul>
+        <p>A maioria dos tumores não apresenta sintomas na fase inicial.</p>
+      </div>
+    </div>
+    <div id="cpr-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Reanimação Cardiopulmonar (RCP)</h2>
+        <p>Os passos para realizar uma reanimação cardiopulmonar (RCP) são:</p>
+        <ol>
+          <li>Garantir a segurança da cena</li>
+          <li>Avaliar a responsividade da vítima</li>
+          <li>Chamar por ajuda</li>
+          <li>Checar o pulso central e a respiração por 5 a 10 segundos</li>
+          <li>
+            Iniciar as compressões torácicas, com uma frequência de 100 a 120
+            compressões por minuto e uma profundidade de 5 a 6 cm
+          </li>
+          <li>
+            Continuar as compressões até a chegada do socorro ou até a vítima
+            voltar a respirar ou se mexer
+          </li>
+        </ol>
+        <p>
+          Se houver um desfibrilador automático externo (DEA) disponível, é
+          possível verificar se há indicação de choque. Nesse caso, os
+          socorristas devem se afastar da vítima e aplicar o choque. Após o
+          choque, deve-se reiniciar as compressões.
+        </p>
+        <p>Algumas outras recomendações para a RCP são:</p>
+        <ul>
+          <li>
+            Deixar o tórax da vítima retornar completamente ao final de cada
+            compressão
+          </li>
+          <li>Não se apoiar no tórax da vítima</li>
+          <li>Trocar o socorrista a cada 2 minutos, se possível</li>
+        </ul>
+      </div>
+    </div>
+    <div id="diabetes-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Diabetes</h2>
+        <p>Os principais sintomas da diabetes são:</p>
+        <ul>
+          <li>Fome e sede excessivas</li>
+          <li>Vontade de urinar várias vezes ao dia</li>
+          <li>Perda de peso</li>
+          <li>Fraqueza</li>
+          <li>Fadiga</li>
+          <li>Mudanças de humor</li>
+          <li>Náusea e vômito</li>
+        </ul>
+        <p>
+          O tratamento da diabetes é feito com acompanhamento médico e pode
+          incluir:
+        </p>
+        <ul>
+          <li>Remédios para diabetes, no caso do tipo 2</li>
+          <li>Doses certas de insulina, no caso do tipo 1</li>
+          <li>
+            Alterações no estilo de vida, como uma dieta balanceada e a prática
+            de exercícios físicos
+          </li>
+        </ul>
+        <p>Para ajudar a controlar a diabetes, pode-se:</p>
+        <ul>
+          <li>Consumir alimentos ricos em fibras e com pouca gordura</li>
+          <li>Substituir o açúcar por adoçante, de preferência stevia</li>
+          <li>Controlar o peso</li>
+          <li>Reduzir o consumo de bebidas alcoólicas</li>
+          <li>Parar de fumar</li>
+          <li>Consumir grãos integrais, legumes ou oleaginosas</li>
+        </ul>
+        <p>
+          O sobrepeso é um dos principais fatores de risco para o diabetes, por
+          isso é importante manter uma alimentação rica em frutas, verduras e
+          legumes, e reduzir o consumo de carboidratos e proteínas.
+        </p>
+      </div>
+    </div>
+    <div id="blood-pressure-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Pressão Alta</h2>
+        <p>
+          A pressão alta, ou hipertensão arterial, pode ser silenciosa na
+          maioria dos casos, mas alguns sintomas podem surgir quando a pressão
+          está muito alta. Entre eles, estão:
+        </p>
+        <ul>
+          <li>Dor de cabeça, principalmente na região da nuca</li>
+          <li>Tontura</li>
+          <li>Mal-estar</li>
+          <li>Escotomas cintilantes (pontos brilhantes na visão)</li>
+          <li>Náuseas</li>
+          <li>Vômitos</li>
+          <li>Dor no peito</li>
+          <li>Zumbido no ouvido</li>
+          <li>Fraqueza</li>
+          <li>Palpitações</li>
+        </ul>
+        <p>Para controlar a pressão alta, é possível:</p>
+        <ul>
+          <li>
+            Manter uma alimentação saudável e equilibrada, com menos sal e sódio
+          </li>
+          <li>Praticar atividades físicas regularmente</li>
+          <li>Diminuir o consumo de álcool e tabaco</li>
+          <li>Dormir bem e cuidar da saúde mental</li>
+          <li>Monitorar a pressão arterial regularmente</li>
+        </ul>
+        <p>
+          A dieta do mediterrâneo é uma opção que pode ajudar a controlar a
+          pressão alta, pois é rica em frutas e hortaliças e tem poucos
+          carboidratos e gorduras.
+        </p>
+        <p>
+          É importante consultar um cardiologista regularmente, principalmente
+          se você:
+        </p>
+        <ul>
+          <li>Tem mais de 65 anos</li>
+          <li>Tem histórico familiar de hipertensão</li>
+          <li>Tem outras comorbidades, como diabetes ou obesidade</li>
+        </ul>
+      </div>
+    </div>
+    <div id="low-blood-pressure-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Pressão Baixa</h2>
+        <p>
+          A pressão baixa, também conhecida como hipotensão arterial, pode
+          causar diversos sintomas, como:
+        </p>
+        <ul>
+          <li>Tontura</li>
+          <li>Visão turva</li>
+          <li>Fraqueza</li>
+          <li>Perda de força</li>
+          <li>Baixa de energia</li>
+          <li>Suor frio</li>
+          <li>Taquicardia</li>
+        </ul>
+        <p>Se alguém estiver com pressão baixa, é recomendado:</p>
+        <ul>
+          <li>
+            Deitar a pessoa em um local fresco e arejado, de preferência com a
+            barriga para cima
+          </li>
+          <li>Afrouxar as roupas, principalmente na região do pescoço</li>
+          <li>Levantar as pernas em torno de 45º em relação ao chão</li>
+          <li>
+            Quando a pessoa estiver recuperada, oferecer líquidos como água,
+            café ou suco de laranja
+          </li>
+        </ul>
+        <p>
+          É importante que a pessoa não se levante ou faça esforço, pois isso
+          pode piorar a tontura e causar desmaios.
+        </p>
+        <p>A pressão baixa pode ser causada por diversos fatores, como:</p>
+        <ul>
+          <li>Desidratação</li>
+          <li>Perda de sangue</li>
+          <li>Anemia</li>
+          <li>Infecção</li>
+          <li>Medicamentos</li>
+          <li>Situações de estresse</li>
+          <li>Dias quentes</li>
+          <li>Doenças como hipoglicemia e problemas cardiovasculares</li>
+        </ul>
+        <p>
+          Para prevenir a pressão baixa, é recomendado manter uma alimentação
+          balanceada e praticar exercícios físicos.
+        </p>
+      </div>
+    </div>
+    <div id="flu-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Gripe</h2>
+        <p>
+          A gripe é uma infecção respiratória causada pelo vírus Influenza, que
+          pode apresentar os seguintes sintomas:
+        </p>
+        <ul>
+          <li>Febre acima de 38°C</li>
+          <li>Dor de cabeça</li>
+          <li>Dor de garganta</li>
+          <li>Tosse seca persistente</li>
+          <li>Dores musculares</li>
+          <li>Calafrios e suores</li>
+          <li>Congestão nasal</li>
+          <li>Perda de olfato e do paladar</li>
+          <li>Fadiga e fraqueza</li>
+        </ul>
+        <p>Para aliviar os sintomas, pode-se:</p>
+        <ul>
+          <li>
+            Repousar para que o organismo se concentre no combate à doença
+          </li>
+          <li>Beber bastante líquidos, como água, chás e sucos naturais</li>
+          <li>Tomar banhos mornos</li>
+          <li>Consumir alimentos quentes, como canja de galinha</li>
+          <li>
+            Tomar remédios para aliviar a dor e a febre, como paracetamol ou
+            ibuprofeno, caso indicado por um médico
+          </li>
+          <li>
+            Tomar complementos de vitamina C, que ajudam a fortalecer o sistema
+            imunológico
+          </li>
+          <li>Fazer gargarejos com água e sal</li>
+          <li>Lavar o nariz com soro</li>
+          <li>Aumentar a umidade do ar com umidificadores de ambiente</li>
+          <li>Usar lenços umedecidos para assoar o nariz</li>
+        </ul>
+        <p>Para evitar a gripe, pode-se:</p>
+        <ul>
+          <li>Evitar contato próximo a pessoas com sintomas de gripe</li>
+          <li>
+            Evitar sair de casa durante o período de transmissão da doença
+          </li>
+          <li>Evitar aglomerações e ambientes fechados</li>
+          <li>Manter os ambientes bem ventilados</li>
+          <li>Adotar hábitos saudáveis, como alimentação balanceada</li>
+        </ul>
+      </div>
+    </div>
+    <div id="head-injury-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações sobre Pancadas na Cabeça</h2>
+        <p>
+          Após bater a cabeça, é importante estar atento a alguns sintomas que
+          podem indicar a necessidade de buscar ajuda médica, como:
+        </p>
+        <ul>
+          <li>Dor de cabeça intensa ou que aumenta progressivamente</li>
+          <li>Tontura ou problemas de equilíbrio</li>
+          <li>Sangramento no couro cabeludo, ouvido ou rosto</li>
+          <li>Desmaio ou perda de consciência</li>
+          <li>Convulsões</li>
+          <li>Confusão mental ou desorientação</li>
+          <li>Náuseas e vômitos</li>
+          <li>Alterações na visão, como visão turva, dupla ou cegueira</li>
+          <li>Dificuldades na fala ou de compreensão</li>
+          <li>Incoordenação motora ou "andar diferente"</li>
+        </ul>
+        <p>Outros sintomas que podem indicar um problema são:</p>
+        <ul>
+          <li>Fraqueza ou tontura persistente</li>
+          <li>"Galo" atrás da orelha ou hematomas ao redor dos olhos</li>
+          <li>
+            Saída persistente de líquido claro ou sanguinolento pelo nariz ou
+            pela orelha
+          </li>
+          <li>Sensibilidade à luz e a ruídos</li>
+          <li>Dificuldade de concentração e para se lembrar</li>
+          <li>
+            Alterações de humor, irritação, tristeza, emotividade, nervosismo
+          </li>
+          <li>Sonolência ou passar a dormir mais ou menos do que o habitual</li>
+        </ul>
+        <p>
+          Em caso de sonolência excessiva, não deixe a pessoa adormecer e
+          procure atendimento médico.
+        </p>
+      </div>
+    </div>
+    <script>
+      function handleError(error) {
+        console.error("An error occurred:", error);
+        addMessage(
+          "Desculpe, ocorreu um erro. Por favor, tente novamente mais tarde.",
+          true
+        );
+      }
+      try {
+        document.addEventListener("DOMContentLoaded", function () {
+          const chatMessages = document.getElementById("chat-messages");
+          const userInput = document.getElementById("user-input");
+          const sendButton = document.getElementById("send-button");
+          const headacheInfoButton = document.getElementById(
+            "headache-info-button"
+          );
+          const feverInfoButton = document.getElementById("fever-info-button");
+          const musclePainInfoButton = document.getElementById(
+            "muscle-pain-info-button"
+          );
+          const nauseaInfoButton =
+            document.getElementById("nausea-info-button");
+          const pregnancyInfoButton = document.getElementById(
+            "pregnancy-info-button"
+          );
+          const fatigueInfoButton = document.getElementById(
+            "fatigue-info-button"
+          );
+          const cancerInfoButton =
+            document.getElementById("cancer-info-button");
+          const cprInfoButton = document.getElementById("cpr-info-button");
+          const diabetesInfoButton = document.getElementById(
+            "diabetes-info-button"
+          );
+          const bloodPressureInfoButton = document.getElementById(
+            "blood-pressure-info-button"
+          );
+          const lowBloodPressureInfoButton = document.getElementById(
+            "low-blood-pressure-info-button"
+          );
+          const fluInfoButton = document.getElementById("flu-info-button");
+          const headInjuryInfoButton = document.getElementById(
+            "head-injury-info-button"
+          );
+          const headacheModal = document.getElementById("headache-modal");
+          const feverModal = document.getElementById("fever-modal");
+          const musclePainModal = document.getElementById("muscle-pain-modal");
+          const nauseaModal = document.getElementById("nausea-modal");
+          const pregnancyModal = document.getElementById("pregnancy-modal");
+          const fatigueModal = document.getElementById("fatigue-modal");
+          const cancerModal = document.getElementById("cancer-modal");
+          const cprModal = document.getElementById("cpr-modal");
+          const diabetesModal = document.getElementById("diabetes-modal");
+          const bloodPressureModal = document.getElementById(
+            "blood-pressure-modal"
+          );
+          const lowBloodPressureModal = document.getElementById(
+            "low-blood-pressure-modal"
+          );
+          const fluModal = document.getElementById("flu-modal");
+          const headInjuryModal = document.getElementById("head-injury-modal");
+          const closeButtons = document.getElementsByClassName("close");
+          function addMessage(message, isAI = false) {
+            const messageElement = document.createElement("div");
+            messageElement.className = isAI ? "ai-message" : "user-message";
+            if (isAI) {
+              messageElement.innerHTML = message;
+            } else {
+              messageElement.textContent = message;
+            }
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          }
+          function generateTopicSuggestions() {
+            const allTopics = [
+              "Dor de cabeça",
+              "Febre",
+              "Dores musculares",
+              "Enjoo",
+              "Gravidez",
+              "Fadiga",
+              "Câncer",
+              "Reanimação Cardiopulmonar (RCP)",
+              "Diabetes",
+              "Pressão Alta",
+              "Pressão Baixa",
+              "Gripe",
+              "Pancadas na Cabeça",
+            ];
+            const randomTopics = allTopics
+              .sort(() => 0.5 - Math.random())
+              .slice(0, 5);
+            let topicList = randomTopics
+              .map((topic) => `<li>${topic}</li>`)
+              .join("");
+            return `<p>Aqui estão alguns tópicos sobre os quais posso fornecer informações:</p><ul>${topicList}</ul>
+                                                    <p>Sobre qual desses tópicos você gostaria de saber mais?</p>`;
+          }
+          function getAIResponse(userMessage) {
+            const lowerCaseMessage = userMessage.toLowerCase();
+            const shortGreetings = ["ola", "tudo bem?", "td bem?", "oi", "oii"];
+            if (shortGreetings.includes(lowerCaseMessage)) {
+              return `Olá! Como posso ajudar você hoje? ${generateTopicSuggestions()}`;
+            }
+            const healthTopics = [
+              "É importante manter uma dieta equilibrada e praticar exercícios regularmente.",
+              "Lembre-se de beber bastante água ao longo do dia para manter-se hidratado.",
+              "O sono adequado é fundamental para a saúde física e mental.",
+              "Consultas médicas regulares são essenciais para prevenção de doenças.",
+              "Pratique técnicas de gerenciamento de estresse, como meditação ou yoga.",
+              "Mantenha suas vacinas em dia para proteção contra doenças preveníveis.",
+              "Uma boa higiene pessoal ajuda a prevenir a propagação de doenças.",
+              "Limite o consumo de álcool e evite o tabagismo para uma vida mais saudável.",
+              "Cultive relacionamentos saudáveis, pois o apoio social é importante para o bem-estar.",
+              "Mantenha-se mentalmente ativo com atividades como leitura ou jogos de raciocínio.",
+            ];
+            const generalConversation = [
+              {
+                keywords: ["olá", "oi", "hey"],
+                responses: [
+                  "Olá! Como posso ajudar você hoje?",
+                  "Oi! Em que posso ser útil?",
+                  "Olá! Estou aqui para responder suas dúvidas sobre saúde.",
+                ],
+              },
+              {
+                keywords: ["como", "vai", "está"],
+                responses: [
+                  "Estou bem, obrigado por perguntar! Como posso ajudar você?",
+                  "Estou funcionando perfeitamente! Em que posso ser útil hoje?",
+                ],
+              },
+              {
+                keywords: ["obrigado", "obrigada", "valeu"],
+                responses: [
+                  "De nada! Estou aqui para ajudar.",
+                  "Fico feliz em poder ajudar! Mais alguma pergunta?",
+                ],
+              },
+              {
+                keywords: ["tchau", "adeus", "até logo"],
+                responses: [
+                  "Até logo! Cuide-se bem.",
+                  "Adeus! Se precisar de mais informações sobre saúde, estarei aqui.",
+                ],
+              },
+              {
+                keywords: ["nome", "quem é você"],
+                responses: [
+                  "Eu sou o IA'so, um assistente virtual focado em saúde. Como posso te ajudar?",
+                  "Meu nome é IA'so, e estou aqui para responder suas dúvidas sobre saúde.",
+                ],
+              },
+              {
+                keywords: ["ajuda", "ajudar"],
+                responses: [
+                  "Claro, estou aqui para ajudar! Sobre qual tópico de saúde você gostaria de saber mais?",
+                  "Posso ajudar com informações sobre diversos temas de saúde. Sobre o que você gostaria de conversar?",
+                ],
+              },
+            ];
+            if (
+              lowerCaseMessage.includes("dor de cabeça") ||
+              lowerCaseMessage.includes("cefaleia")
+            ) {
+              headacheInfoButton.style.display = "inline-block";
+              return "Entendo que você está com dúvidas sobre dor de cabeça. Clique no botão 'Informações sobre Dor de Cabeça' que apareceu abaixo para obter informações detalhadas. Se os sintomas persistirem, é importante consultar um médico.";
+            } else if (lowerCaseMessage.includes("febre")) {
+              feverInfoButton.style.display = "inline-block";
+              return "Vejo que você tem perguntas sobre febre. Para informações detalhadas, clique no botão 'Informações sobre Febre' que apareceu abaixo. Se a febre for alta ou persistente, é importante procurar atendimento médico.";
+            } else if (
+              lowerCaseMessage.includes("dor muscular") ||
+              lowerCaseMessage.includes("mialgia")
+            ) {
+              musclePainInfoButton.style.display = "inline-block";
+              return "Parece que você está com dúvidas sobre dores musculares. Clique no botão 'Informações sobre Dores Musculares' que apareceu abaixo para obter informações detalhadas. Se as dores forem intensas ou persistentes, é recomendado consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("enjoo") ||
+              lowerCaseMessage.includes("náusea")
+            ) {
+              nauseaInfoButton.style.display = "inline-block";
+              return "Entendo que você está com dúvidas sobre enjoo ou náusea. Clique no botão 'Informações sobre Enjoo' que apareceu abaixo para obter informações detalhadas. A náusea pode ser causada por diversos fatores, como movimentos contínuos ou condições médicas. Se os sintomas persistirem, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("gravidez") ||
+              lowerCaseMessage.includes("gestação") ||
+              lowerCaseMessage.includes("grávida")
+            ) {
+              pregnancyInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre gravidez. Clique no botão 'Informações sobre Gravidez' que apareceu abaixo para obter informações detalhadas. Se você suspeita que está grávida ou tem preocupações específicas, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("fadiga") ||
+              lowerCaseMessage.includes("cansaço") ||
+              lowerCaseMessage.includes("falta de energia")
+            ) {
+              fatigueInfoButton.style.display = "inline-block";
+              return "Entendo que você está com dúvidas sobre fadiga ou cansaço. Clique no botão 'Informações sobre Fadiga' que apareceu abaixo para obter informações detalhadas. Se o cansaço persistir ou for muito intenso, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("câncer") ||
+              lowerCaseMessage.includes("tumor") ||
+              lowerCaseMessage.includes("neoplasia")
+            ) {
+              cancerInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre câncer. Clique no botão 'Informações sobre Câncer' que apareceu abaixo para obter informações detalhados. É importante lembrar que o diagnóstico precoce é fundamental para o tratamento do câncer. Se você tiver suspeitas ou sintomas persistentes, consulte um médico.";
+            } else if (
+              lowerCaseMessage.includes("rcp") ||
+              lowerCaseMessage.includes("reanimação cardiopulmonar") ||
+              lowerCaseMessage.includes("ressuscitação")
+            ) {
+              cprInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre Reanimação Cardiopulmonar (RCP). Clique no botão 'Informações sobre RCP' que apareceu abaixo para obter informações detalhadas. Lembre-se, em situações de emergência, sempre chame ajuda profissional imediatamente.";
+            } else if (
+              lowerCaseMessage.includes("diabetes") ||
+              lowerCaseMessage.includes("açúcar no sangue")
+            ) {
+              diabetesInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre diabetes. Clique no botão 'Informações sobre Diabetes' que apareceu abaixo para obter informações detalhadas. Se você tiver sintomas persistentes ou suspeitar que tem diabetes, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("pressão alta") ||
+              lowerCaseMessage.includes("hipertensão")
+            ) {
+              bloodPressureInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre pressão alta ou hipertensão. Clique no botão 'Informações sobre Pressão Alta' que apareceu abaixo para obter informações detalhadas. Se você tiver sintomas persistentes ou suspeitar que tem pressão alta, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("pressão baixa") ||
+              lowerCaseMessage.includes("hipotensão")
+            ) {
+              lowBloodPressureInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre pressão baixa ou hipotensão. Clique no botão 'Informações sobre Pressão Baixa' que apareceu abaixo para obter informações detalhadas. Se você tiver sintomas persistentes ou suspeitar que tem pressão baixa, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("gripe") ||
+              lowerCaseMessage.includes("resfriado") ||
+              lowerCaseMessage.includes("influenza")
+            ) {
+              fluInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre gripe. Clique no botão 'Informações sobre Gripe' que apareceu abaixo para obter informações detalhadas. Se os sintomas forem graves ou persistirem, é importante consultar um médico.";
+            } else if (
+              lowerCaseMessage.includes("pancada na cabeça") ||
+              lowerCaseMessage.includes("bater a cabeça") ||
+              lowerCaseMessage.includes("traumatismo craniano")
+            ) {
+              headInjuryInfoButton.style.display = "inline-block";
+              return "Entendo que você tem dúvidas sobre pancadas na cabeça ou traumatismo craniano. Clique no botão 'Informações sobre Pancadas na Cabeça' que apareceu abaixo para obter informações detalhadas. Em caso de sintomas graves ou persistentes após uma pancada na cabeça, é crucial buscar atendimento médico imediatamente.";
+            }
+            const fallbackResponse = `Desculpe, não tenho uma resposta específica para sua pergunta. Como sua saúde é muito importante, recomendo que você procure atendimento médico para uma avaliação adequada. Aqui estão alguns serviços de saúde próximos que podem ajudar:<ul><li>UPA: (99)9999-9999</li><li>CEMEG: (99)9999-9999</li><li>Posto de Saúde: (99)9999-9999</li><li>Hospital: (99)9999-9999</li></ul>Lembre-se, em caso de emergência, sempre ligue para o serviço de emergência local.`;
+            return fallbackResponse;
+          }
+          function handleUserInput() {
+            const userMessage = userInput.value.trim();
+            if (userMessage) {
+              addMessage(userMessage);
+              userInput.value = "";
+              setTimeout(() => {
+                try {
+                  const aiResponse = getAIResponse(userMessage);
+                  addMessage(aiResponse, true);
+                } catch (error) {
+                  handleError(error);
+                }
+              }, 1000);
+            }
+          }
+          sendButton.addEventListener("click", handleUserInput);
+          userInput.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+              handleUserInput();
+            }
+          });
+          headacheInfoButton.addEventListener("click", function () {
+            headacheModal.style.display = "block";
+          });
+          feverInfoButton.addEventListener("click", function () {
+            feverModal.style.display = "block";
+          });
+          musclePainInfoButton.addEventListener("click", function () {
+            musclePainModal.style.display = "block";
+          });
+          nauseaInfoButton.addEventListener("click", function () {
+            nauseaModal.style.display = "block";
+          });
+          pregnancyInfoButton.addEventListener("click", function () {
+            pregnancyModal.style.display = "block";
+          });
+          fatigueInfoButton.addEventListener("click", function () {
+            fatigueModal.style.display = "block";
+          });
+          cancerInfoButton.addEventListener("click", function () {
+            cancerModal.style.display = "block";
+          });
+          cprInfoButton.addEventListener("click", function () {
+            cprModal.style.display = "block";
+          });
+          diabetesInfoButton.addEventListener("click", function () {
+            diabetesModal.style.display = "block";
+          });
+          bloodPressureInfoButton.addEventListener("click", function () {
+            bloodPressureModal.style.display = "block";
+          });
+          lowBloodPressureInfoButton.addEventListener("click", function () {
+            lowBloodPressureModal.style.display = "block";
+          });
+          fluInfoButton.addEventListener("click", function () {
+            fluModal.style.display = "block";
+          });
+          headInjuryInfoButton.addEventListener("click", function () {
+            headInjuryModal.style.display = "block";
+          });
+          for (let i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].addEventListener("click", function () {
+              headacheModal.style.display = "none";
+              feverModal.style.display = "none";
+              musclePainModal.style.display = "none";
+              nauseaModal.style.display = "none";
+              pregnancyModal.style.display = "none";
+              fatigueModal.style.display = "none";
+              cancerModal.style.display = "none";
+              cprModal.style.display = "none";
+              diabetesModal.style.display = "none";
+              bloodPressureModal.style.display = "none";
+              lowBloodPressureModal.style.display = "none";
+              fluModal.style.display = "none";
+              headInjuryModal.style.display = "none";
+            });
+          }
+          window.addEventListener("click", function (event) {
+            if (event.target == headacheModal) {
+              headacheModal.style.display = "none";
+            }
+            if (event.target == feverModal) {
+              feverModal.style.display = "none";
+            }
+            if (event.target == musclePainModal) {
+              musclePainModal.style.display = "none";
+            }
+            if (event.target == nauseaModal) {
+              nauseaModal.style.display = "none";
+            }
+            if (event.target == pregnancyModal) {
+              pregnancyModal.style.display = "none";
+            }
+            if (event.target == fatigueModal) {
+              fatigueModal.style.display = "none";
+            }
+            if (event.target == cancerModal) {
+              cancerModal.style.display = "none";
+            }
+            if (event.target == cprModal) {
+              cprModal.style.display = "none";
+            }
+            if (event.target == diabetesModal) {
+              diabetesModal.style.display = "none";
+            }
+            if (event.target == bloodPressureModal) {
+              bloodPressureModal.style.display = "none";
+            }
+            if (event.target == lowBloodPressureModal) {
+              lowBloodPressureModal.style.display = "none";
+            }
+            if (event.target == fluModal) {
+              fluModal.style.display = "none";
+            }
+            if (event.target == headInjuryModal) {
+              headInjuryModal.style.display = "none";
+            }
+          });
+          addMessage(
+            "Olá! Eu sou o IA'so, seu agente de saúde inteligente. Como posso ajudar você hoje? Fique à vontade para fazer perguntas sobre saúde!",
+            true
+          );
+          const backToTopButton = document.getElementById("back-to-top");
+          backToTopButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+          const title = "IA'so - Seu Agente de Saúde Inteligente";
+          const mainTitle = document.getElementById("main-title");
+          let i = 0;
+          function typeWriter() {
+            if (i < title.length) {
+              mainTitle.innerHTML += title.charAt(i);
+              i++;
+              setTimeout(typeWriter, 100);
+            }
+          }
+          typeWriter();
+        });
+      } catch (error) {
+        handleError(error);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.w3-sidebar {
+  width: 120px;
+  background: #949292;
+}
+
+.w3-bar-item {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  p {
+    margin: 0;
+  }
+}
